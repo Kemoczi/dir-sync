@@ -6,8 +6,8 @@ Usage:
 python sync_dirs.py <arguments>
 
 Mandatory arguments (ordered):
-    1. source_dir - path to source folder
-    2. destination_dir - path to replica folder
+    1. source - path to source folder
+    2. replica - path to replica folder
     3. interval - interval between synchronizations (in seconds or hh:mm:ss)
     4. syncs - amount of synchronizations
     5. log - path to log file
