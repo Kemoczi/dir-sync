@@ -1,4 +1,11 @@
-""" Directory sync script for Veeam technical assessment """
+"""
+Directory sync script
+
+Usage:
+
+python sync_dirs.py <source_dir> <destination_dir> <interval[s]> <number of syncs> <excluded paths>
+
+"""
 import argparse
 import os
 import shutil
