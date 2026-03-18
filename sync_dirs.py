@@ -55,6 +55,7 @@ def natural_int(value: int | str) -> int:
 
 def parse_interval(interval: str) -> int:
     """ Parser enabling user to set time interval in hh:mm:ss format (or h:m:s) """
+    interval = str(interval)
     if ":" in interval:
         parts = interval.split(":")
         try:

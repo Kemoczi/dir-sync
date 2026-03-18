@@ -2,3 +2,4 @@ venv
 todo.txt
 .idea/
 ./mypy_cache
+__pycache__
