@@ -1,7 +1,6 @@
 import pytest
 import sync_dirs
 import shutil
-from pathlib import Path
 from argparse import ArgumentTypeError
 
 NINT_OK = [(1,1), (1.5, 1)] # type: ignore
@@ -50,12 +49,8 @@ def test_sync_copies_new_file(tmp_path):
     assert (replica / "file.txt").exists()
     assert (replica / "file.txt").read_text(encoding="utf-8") == "Lorem ipsum"
 
-    # Cleanup
-    # shutil.rmtree(source)
-    # shutil.rmtree(replica)
 
-
-def test_copy_items_logs_permission_error(tmp_path, monkeypatch, caplog):
+def test_sync_copy_permission_error(tmp_path, monkeypatch, caplog):
     source = tmp_path / "source"
     replica = tmp_path / "replica"
     source.mkdir()
