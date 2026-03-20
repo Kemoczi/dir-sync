@@ -3,7 +3,7 @@ import sync_dirs
 import shutil
 from argparse import ArgumentTypeError
 
-NINT_OK = [(1,1), (1.5, 1)] # type: ignore
+NINT_OK = [(1,1), (1.5, 1)]
 NINT_ERR = (0, "dd", "20.5", "1,5", "0", "-1", -1.1)
 
 INTERVAL_OK = [(10, 10), ("01:20:10", 4810), ("1:2:3", 3723)]
@@ -11,7 +11,7 @@ INTERVAL_ERR = ("dd", 11.5, "10::1")
 
 
 @pytest.mark.unit
-@pytest.mark.parametrize("value, result", NINT_OK) # type: ignore
+@pytest.mark.parametrize("value, result", NINT_OK)
 def test_natural_int(value: int, result: int):
     assert sync_dirs.natural_int(value) == result
 
